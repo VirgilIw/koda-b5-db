@@ -218,9 +218,9 @@ INSERT INTO movie_actors (movie_id, actor_id) VALUES (1, 2);
 INSERT INTO movie_actors (movie_id, actor_id) VALUES (1, 3);
 
 -- BONUS: Create Movie (Admin)
-INSERT INTO movies (movie_name, movie_title, movie_release_date, director_id, poster_image, backdrop_image, created_at, updated_at)
-VALUES ('Spider-Man', 'Spider-Man: No Way Home', '2021-12-17', 2, 'spiderman_poster.jpg', 'spiderman_backdrop.jpg', NOW(), NOW())
-RETURNING id;
+-- INSERT INTO movies (movie_name, movie_title, movie_release_date, director_id, poster_image, backdrop_image, created_at, updated_at)
+-- VALUES ('Spider-Man', 'Spider-Man: No Way Home', '2021-12-17', 2, 'spiderman_poster.jpg', 'spiderman_backdrop.jpg', NOW(), NOW())
+-- RETURNING id;
 
 -- Insert genre untuk movie baru (movie_id: 2, genre_id: 1, 2)
 INSERT INTO movie_genres (movie_id, genre_id) VALUES (2, 1);
