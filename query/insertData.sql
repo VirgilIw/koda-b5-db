@@ -72,7 +72,7 @@ FROM movies m
 LEFT JOIN directors d ON m.director_id = d.id
 LEFT JOIN movie_genres mg ON m.id = mg.movie_id
 LEFT JOIN genres g ON mg.genre_id = g.id
-WHERE (m.movie_name ILIKE '%avengers%' OR m.movie_title ILIKE '%avengers%')
+WHERE (m.movie_name LIKE '%avengers%' OR m.movie_title LIKE '%avengers%')
   AND (1 IS NULL OR g.id = 1)
 GROUP BY m.id, m.movie_name, m.movie_title, m.movie_release_date,
          m.poster_image, m.backdrop_image, d.director_name
@@ -84,7 +84,7 @@ SELECT COUNT(DISTINCT m.id) as total
 FROM movies m
 LEFT JOIN movie_genres mg ON m.id = mg.movie_id
 LEFT JOIN genres g ON mg.genre_id = g.id
-WHERE (m.movie_name ILIKE '%avengers%' OR m.movie_title ILIKE '%avengers%')
+WHERE (m.movie_name LIKE '%avengers%' OR m.movie_title LIKE '%avengers%')
   AND (1 IS NULL OR g.id = 1);
 
 -- 7. Get Schedule
